@@ -21,5 +21,6 @@ In this example, I use Metallb to loadbalance, so I can access dashboard via htt
 - Edit config IngressRoute Traefik's Dashboard to use SSL/TLS for it: We can add line - websecure under - web in config before  
 Finally, we redeploy Traefik: kubectl rollout restart deployment traefik
 ![Alt text](images/before.png?raw=true "Title")
+![Alt text](images/Affter.png?raw=true "Title")
 
   

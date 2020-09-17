@@ -14,7 +14,7 @@ In this example, I use Metallb to loadbalance, so I can access dashboard via htt
 - For editing Traefik's deployment:  
   -  kubectl edit deployment traefik: In this config, we will add some line below:  
         - --certificatesresolvers.myresolver.acme.tlschallenge
-        - --certificatesresolvers.myresolver.acme.email=ducptm@vega.com.vn
+        - --certificatesresolvers.myresolver.acme.email=ducptm@example.com.vn
         - --certificatesresolvers.myresolver.acme.storage=/data/acme.json
         - --certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory
   

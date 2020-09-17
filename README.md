@@ -16,12 +16,12 @@ metadata:
   name: dashboard  
 spec:  
   entryPoints:  
-    - web  
+    \- web  
   routes:  
-    - match: Host(`traefik-ui.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))  
+    \- match: Host(`traefik-ui.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))  
       kind: Rule  
       services:  
-        - name: api@internal  
+        \- name: api@internal  
           kind: TraefikService  
 In this example, I use Metallb to loadbalance, so I can access dashboard via http://traefik-ui.com/dashboard/
  

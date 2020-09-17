@@ -18,6 +18,6 @@ In this example, I use Metallb to loadbalance, so I can access dashboard via htt
         - --certificatesresolvers.myresolver.acme.storage=/data/acme.json
         - --certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory
 - Edit config IngressRoute Traefik's Dashboard to use SSL/TLS for it: We can add line - websecure under - web in config before  
-Finally, we redeploy Traefik: kubectl -n service rollout restart deployment traefik
+Finally, we redeploy Traefik: kubectl rollout restart deployment traefik
 
   

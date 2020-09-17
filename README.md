@@ -10,18 +10,6 @@
    - helm repo update  
    - helm install traefik traefik/traefik      
 - For using Dashboard, you can create IngressRoute:  
-apiVersion: traefik.containo.us/v1alpha1  
-kind: IngressRoute  
-metadata:  
-  name: dashboard  
-spec:  
-  entryPoints:  
-    \- web  
-  routes:  
-    \- match: Host(`traefik-ui.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))  
-      kind: Rule  
-      services:  
-        \- name: api@internal  
-          kind: TraefikService  
+
 In this example, I use Metallb to loadbalance, so I can access dashboard via http://traefik-ui.com/dashboard/
  

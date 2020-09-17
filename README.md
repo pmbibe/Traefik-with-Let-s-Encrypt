@@ -12,9 +12,10 @@
 In this example, I use Metallb to loadbalance, so I can access dashboard via http://traefik-ui.com/dashboard/  
 # In oder to use Let's Encrypt for creating a cert, we will edit Traefik's deployment
 - For editing Traefik's deployment:  
-  -  kubectl edit deployment traefik: In this config, we will add some line below:  
+  -  Use kubectl edit deployment traefik: In this config, we will add some line below:  
         - --certificatesresolvers.myresolver.acme.tlschallenge
         - --certificatesresolvers.myresolver.acme.email=ducptm@example.com.vn
         - --certificatesresolvers.myresolver.acme.storage=/data/acme.json
         - --certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory
+- Edit config IngressRoute Traefik's Dashboard to use SSL/TLS for it: We can add line - websecure under - web in config before
   

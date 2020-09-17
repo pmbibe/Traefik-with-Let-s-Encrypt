@@ -9,6 +9,6 @@
    - helm repo add traefik https://containous.github.io/traefik-helm-chart  
    - helm repo update  
    - helm install traefik traefik/traefik      
-- For using Dashboard, you can create IngressRoute:  kubectl apply -f dashboard-traefik.yaml  
+- For using Dashboard, you can create IngressRoute: kubectl apply -f dashboard-traefik.yaml  
 In this example, I use Metallb to loadbalance, so I can access dashboard via http://traefik-ui.com/dashboard/  
  

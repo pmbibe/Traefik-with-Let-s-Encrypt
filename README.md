@@ -1,4 +1,3 @@
-# Traefik-with-Let-s-Encrypt
 # Install Traefik with Helm 3  
 - The first, you must install Helm 3  
    - curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3  
@@ -11,4 +10,4 @@
    - helm install traefik traefik/traefik      
 - For using Dashboard, you can create IngressRoute: kubectl apply -f dashboard-traefik.yaml  
 In this example, I use Metallb to loadbalance, so I can access dashboard via http://traefik-ui.com/dashboard/  
- 
+# In oder to use Let's Encrypt for creating a cert, we will edit Traefik's deployment
